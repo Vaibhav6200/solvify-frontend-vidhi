@@ -1,0 +1,740 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300; 400; 500;600;700&display=swap");
+ *, *:after, *:before {
+
+
+        box-sizing: border-box;
+    }
+    
+    
+
+    :root {
+        --c-white: #fff;
+        --c-black: #000;
+        --c-ash: #eaeef6;
+        --c-charcoal: #a0a0a0;
+        --c-void: #141b22;
+        --c-fair-pink: #ffedec;
+        --c-apricot: #fbc8be;
+        --c-coffee: #754d42;
+        --c-del-rio: #917072;
+        --c-java: #1fcac5;
+        --c-titan-white: #f1eeff;
+        --c-cold-purple: #a69fd6;
+        --c-indigo: #6558d3;
+        --c-governor: #4133b7;
+    }
+
+    body {
+        font-family: "Spline Sans", sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: var(--c-ash);
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        width: 95%;
+        margin: 10vh auto;
+    }
+
+    .card {
+        border-radius: 16px;
+        box-shadow: 0 30px 30px -25px rgba(65, 51, 183, .25);
+        max-width: 450px;
+    }
+
+    
+    .plan {
+        padding: 10px;
+        background-color: var(--c-white);
+        color: var(--c-del-rio);
+    }
+
+    .plan strong {
+        font-weight: 600;
+        color: var(--c-coffee);
+    }
+
+    .plan .inner {
+        padding: 10px;
+        padding-top: 40px;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .plan .pricing {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--c-governor);
+        border-radius: 99em 0 0 99em;
+        display: flex;
+        align-items: center;
+        padding: 0.625em 0.75em;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color:white
+    }
+
+    .plan .pricing small {
+        color: white;
+        font-size: 0.75em;
+        margin-left: 0.25em;
+    }
+
+    .plan .title {
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: var(--c-coffee);
+    }
+
+    .plan .title + * {
+        margin-top: 0.75rem;
+    }
+
+    .plan .info + * {
+        margin-top: 1rem;
+    }
+
+    .plan .features {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .plan .features li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .plan .features li + * {
+        margin-top: 0.75rem;
+    }
+
+    .plan .features .icon {
+        background-color: green;
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+        color: var(--c-white);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    .plan .features .icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .plan .features + * {
+        margin-top: 1.25rem;
+    }
+
+    .plan button {
+        font: inherit;
+        background-color: var(--c-indigo);
+        border-radius: 6px;
+        color: var(--c-white);
+        font-weight: 500;
+        font-size: 1.125rem;
+        width: 100%;
+        border: 0;
+        padding: 1em;
+    }
+
+    .plan button:hover, .plan button:focus {
+        background-color: var(--c-governor);
+    }
+
+
+
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="cards">
+      <article class="plan [ card ]">
+        <div class="inner">
+          <span class="pricing">
+            <span> 1500 <small>/ month</small> </span>
+          </span>
+          <h2 class="title">Basic</h2>
+          <p class="info">Features</p>
+          <ul class="features">
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              From Documentation, code is executed locally</li> and checked according to given description
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>We select your code reviewer</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>Code Review for single application</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>“Trusted by us”  tag</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>10 day review period</span>
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  x="2.5"
+                  y="2"
+                  width="15"
+                  height="20"
+                  fill="url(#pattern0)"
+                />
+                <path
+                  d="M10 2C4.47715 2 0 6.47715 0 12C0 17.5228 4.47715 22 10 22C15.5228 22 20 17.5228 20 12C19.9936 6.47982 15.5202 2.00643 10 2Z"
+                  fill="#FF4242"
+                />
+                <rect width="20" height="24" fill="url(#pattern1)" />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_466_1927"
+                      transform="matrix(0.0111111 0 0 0.00833333 0 0.125)"
+                    />
+                  </pattern>
+                  <pattern
+                    id="pattern1"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image1_466_1927"
+                      transform="matrix(0.01 0 0 0.00833333 0 0.0833333)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_466_1927"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAAA4RJREFUeF7t3EFq21AQBuARmPYEhkJP5IWhXXjdYzTtpskquUb3hS5kMN35NC3ZeuWCqIuDlLjGsjRvZv4Z0ck2z8z/Pk2epCdHFeUPRKCCVMkilNCgJkjohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCVyY6eGvRisXg9m83uiOhDm/1r0zRfNpvNb9BcRGWs86t09Gq1erXf778R0fJ0tlVV/djtdu+22+1epGD8YUR+MXRfyM4mOjYqvwh6KGR0bGT+YuixIaNio/MXQXNDRsP2yM+Gbs/O34loUXiO2jRN897rasQrPxt6uVw+ENHHQuTuYy7YCshd/oe6rj9xDEqgfxHRG06RS2PRVyOly0XPPB/rumYZuEEfJ4DCVkY+Rv9Z1/VbTrOVQN8T0Q2nyMBY02VEcbl4nsbhcLhfr9efOQZsaIvgRGSCHSkrG/p4FA3+FNWXkWgZi6CjY0dDfjofcdaZ87ERJxQxkxg6WmdHRVaBjoIdGVkN2hs7OrIqtBf2FJDVodHYU0E2gUZhTwnZDNoaez6f/7n0jFJyqWq97yK6jh6amNUtcFu3dD/8UmyTLYDTQqbQVp09dIA5v7fu5C6LOXRkbBSy6RqNuF3ndO75WCQyFDpSZ6OR4dARsD2QXaA9sb2Q3aA9sD2RXaGR2N7I7tAI7AjIIaAtsaMgJ7TkQpz5Wcid4bVMFrtw/+wxBPkyvCu0NfLzPkMAbDdoFHIUbBdoNHIEbDi0F7I3NhTaG9kTGwYdBdkLGwIdDdkD2xw6KjIa2xQ6H86+3DqZQVt0crd3kV83aA+gJXL3f+WIGsztjKvD1TsaCYCsJUVXhfaYuEfNEnQ1aM8Je9Yei64CHWGiETJcQxdDR5pgpCzn6CLoiBOLmEn0KCvqhKyeQUqfPxZ1dGTk7k82WkY2tNVttcU7PCJlZUMrva/j9Fxh+iVwI+zpvK/j6QQBemhqsIxM530dKGSjNXsy7+swXS76bhy0lpGpvK/DBbnDV8Auys8+GUquU9HLRV9nl67ZkvxF0CXYkpBjN24447jY0vzF0BxsaUgOIGfsWGyN/CLoMdgaITl43LFD2Fr5xdDXsLVCcvG44/uwNfOrQB8n1p7Nb89e1H3r9WpMLrZ1fjVo7sT+t/EJDTriCZ3QIAFQmezohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCV+QsW3LyXUOtz6AAAAABJRU5ErkJggg=="
+                  />
+                  <image
+                    id="image1_466_1927"
+                    width="100"
+                    height="100"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgElEQVR4nO3cX2+LUQCA8SfhG5BsEmvdmEpkiivuMFeMcYUZ7vhifB4S/xLMBSbxLyEmM6XSpJKmSe2cetv37Jznl/Ry63n77Kzb23MOSJIkSZIkSZIkSZIkSZJysBs4Qrpm+48i7ALuAxvAadIzAzwGngH7KCRGt//oRTlDejG6/cfTnGfKcIzUoswOxcg6yqgYg1HO1ji+3gv+5B/jewjspZAYg1EWaxjffuB5wPgeAHvIQO+vqa8BF9ytYabMAS8Cx/YLuEImTgFfAi/8O3AusRi/gTtk5mRElE3gwgTH0oicGbfJ1Angc81RGsDLiBi3yFwvyqfAF+QHsFThcxtjhOORUS5WEKMJrAU+Z6eEmVFnlGZkjJsU6hjwMSLKpTGewxgJRTkAvHJmxGtHRlkO+J4HgdcRMVbHGHfW2hFRtoDL28R4Y4xqonz4zyixMW5UMO6sHY2I0ntBrw187bwxJmNhjCi9GG+dGZON8j7i11dowJ/A1QmOO2stYD3whQ6dTSt1X9RO16ooijESitIBrlc5IMGhiDdtYyQapePMMEhRs2PdN/N83tRX6r6IXLT8szcdh4F3Ff9j6M3EMS1462Rn3/Gd9+Zi/TG2hpZ3evs9gw+oVqu+iFy0K/xc3c/Tp7zyZDnge7riJMFlQE2XAaW3erHpEtJ0YowTpYgV7ymsgG+4DaGaPSJLFcQwSsK7qBrunorfZ7gJnCed/YV3yUzsps/FKYxpLnA7dHZR3Bad4MEB9wJ+CjdqOs2huIMDQqLUfd7JbElHa2wXpe4YRR4+MypKamdmzZR0PNNwlG+JxRiM8qiUA8z+8og/SZIkSZIkSZIkSZIkSRLT8Ac3Q8DXdsnrRgAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+              <span>No security check provided</span>
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  x="2.5"
+                  y="2"
+                  width="15"
+                  height="20"
+                  fill="url(#pattern0)"
+                />
+                <path
+                  d="M10 2C4.47715 2 0 6.47715 0 12C0 17.5228 4.47715 22 10 22C15.5228 22 20 17.5228 20 12C19.9936 6.47982 15.5202 2.00643 10 2Z"
+                  fill="#FF4242"
+                />
+                <rect width="20" height="24" fill="url(#pattern1)" />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_466_1927"
+                      transform="matrix(0.0111111 0 0 0.00833333 0 0.125)"
+                    />
+                  </pattern>
+                  <pattern
+                    id="pattern1"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image1_466_1927"
+                      transform="matrix(0.01 0 0 0.00833333 0 0.0833333)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_466_1927"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAAA4RJREFUeF7t3EFq21AQBuARmPYEhkJP5IWhXXjdYzTtpskquUb3hS5kMN35NC3ZeuWCqIuDlLjGsjRvZv4Z0ck2z8z/Pk2epCdHFeUPRKCCVMkilNCgJkjohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCVyY6eGvRisXg9m83uiOhDm/1r0zRfNpvNb9BcRGWs86t09Gq1erXf778R0fJ0tlVV/djtdu+22+1epGD8YUR+MXRfyM4mOjYqvwh6KGR0bGT+YuixIaNio/MXQXNDRsP2yM+Gbs/O34loUXiO2jRN897rasQrPxt6uVw+ENHHQuTuYy7YCshd/oe6rj9xDEqgfxHRG06RS2PRVyOly0XPPB/rumYZuEEfJ4DCVkY+Rv9Z1/VbTrOVQN8T0Q2nyMBY02VEcbl4nsbhcLhfr9efOQZsaIvgRGSCHSkrG/p4FA3+FNWXkWgZi6CjY0dDfjofcdaZ87ERJxQxkxg6WmdHRVaBjoIdGVkN2hs7OrIqtBf2FJDVodHYU0E2gUZhTwnZDNoaez6f/7n0jFJyqWq97yK6jh6amNUtcFu3dD/8UmyTLYDTQqbQVp09dIA5v7fu5C6LOXRkbBSy6RqNuF3ndO75WCQyFDpSZ6OR4dARsD2QXaA9sb2Q3aA9sD2RXaGR2N7I7tAI7AjIIaAtsaMgJ7TkQpz5Wcid4bVMFrtw/+wxBPkyvCu0NfLzPkMAbDdoFHIUbBdoNHIEbDi0F7I3NhTaG9kTGwYdBdkLGwIdDdkD2xw6KjIa2xQ6H86+3DqZQVt0crd3kV83aA+gJXL3f+WIGsztjKvD1TsaCYCsJUVXhfaYuEfNEnQ1aM8Je9Yei64CHWGiETJcQxdDR5pgpCzn6CLoiBOLmEn0KCvqhKyeQUqfPxZ1dGTk7k82WkY2tNVttcU7PCJlZUMrva/j9Fxh+iVwI+zpvK/j6QQBemhqsIxM530dKGSjNXsy7+swXS76bhy0lpGpvK/DBbnDV8Auys8+GUquU9HLRV9nl67ZkvxF0CXYkpBjN24447jY0vzF0BxsaUgOIGfsWGyN/CLoMdgaITl43LFD2Fr5xdDXsLVCcvG44/uwNfOrQB8n1p7Nb89e1H3r9WpMLrZ1fjVo7sT+t/EJDTriCZ3QIAFQmezohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCV+QsW3LyXUOtz6AAAAABJRU5ErkJggg=="
+                  />
+                  <image
+                    id="image1_466_1927"
+                    width="100"
+                    height="100"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgElEQVR4nO3cX2+LUQCA8SfhG5BsEmvdmEpkiivuMFeMcYUZ7vhifB4S/xLMBSbxLyEmM6XSpJKmSe2cetv37Jznl/Ry63n77Kzb23MOSJIkSZIkSZIkSZIkSZJysBs4Qrpm+48i7ALuAxvAadIzAzwGngH7KCRGt//oRTlDejG6/cfTnGfKcIzUoswOxcg6yqgYg1HO1ji+3gv+5B/jewjspZAYg1EWaxjffuB5wPgeAHvIQO+vqa8BF9ytYabMAS8Cx/YLuEImTgFfAi/8O3AusRi/gTtk5mRElE3gwgTH0oicGbfJ1Angc81RGsDLiBi3yFwvyqfAF+QHsFThcxtjhOORUS5WEKMJrAU+Z6eEmVFnlGZkjJsU6hjwMSLKpTGewxgJRTkAvHJmxGtHRlkO+J4HgdcRMVbHGHfW2hFRtoDL28R4Y4xqonz4zyixMW5UMO6sHY2I0ntBrw187bwxJmNhjCi9GG+dGZON8j7i11dowJ/A1QmOO2stYD3whQ6dTSt1X9RO16ooijESitIBrlc5IMGhiDdtYyQapePMMEhRs2PdN/N83tRX6r6IXLT8szcdh4F3Ff9j6M3EMS1462Rn3/Gd9+Zi/TG2hpZ3evs9gw+oVqu+iFy0K/xc3c/Tp7zyZDnge7riJMFlQE2XAaW3erHpEtJ0YowTpYgV7ymsgG+4DaGaPSJLFcQwSsK7qBrunorfZ7gJnCed/YV3yUzsps/FKYxpLnA7dHZR3Bad4MEB9wJ+CjdqOs2huIMDQqLUfd7JbElHa2wXpe4YRR4+MypKamdmzZR0PNNwlG+JxRiM8qiUA8z+8og/SZIkSZIkSZIkSZIkSRLT8Ac3Q8DXdsnrRgAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+              <span>Can not choose reviewer</span>
+            </li>
+            
+             </ul>
+          <button class="button">Choose plan</button>
+        </div>
+    </article>
+
+    <article class="plan [ card ]">
+        <div class="inner">
+          <span class="pricing">
+            <span> 2500 <small>/ month</small> </span>
+          </span>
+          <h2 class="title">Intermediate</h2>
+          <p class="info">Features</p>
+          <ul class="features">
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              From Documentation, code is executed locally</li> and checked according to given description
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>We select your code reviewer</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>Code Review for max 3 application</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>“Trusted by us”  tag</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>7 day review period</span>
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  x="2.5"
+                  y="2"
+                  width="15"
+                  height="20"
+                  fill="url(#pattern0)"
+                />
+                <path
+                  d="M10 2C4.47715 2 0 6.47715 0 12C0 17.5228 4.47715 22 10 22C15.5228 22 20 17.5228 20 12C19.9936 6.47982 15.5202 2.00643 10 2Z"
+                  fill="#FF4242"
+                />
+                <rect width="20" height="24" fill="url(#pattern1)" />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_466_1927"
+                      transform="matrix(0.0111111 0 0 0.00833333 0 0.125)"
+                    />
+                  </pattern>
+                  <pattern
+                    id="pattern1"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image1_466_1927"
+                      transform="matrix(0.01 0 0 0.00833333 0 0.0833333)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_466_1927"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAAA4RJREFUeF7t3EFq21AQBuARmPYEhkJP5IWhXXjdYzTtpskquUb3hS5kMN35NC3ZeuWCqIuDlLjGsjRvZv4Z0ck2z8z/Pk2epCdHFeUPRKCCVMkilNCgJkjohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCVyY6eGvRisXg9m83uiOhDm/1r0zRfNpvNb9BcRGWs86t09Gq1erXf778R0fJ0tlVV/djtdu+22+1epGD8YUR+MXRfyM4mOjYqvwh6KGR0bGT+YuixIaNio/MXQXNDRsP2yM+Gbs/O34loUXiO2jRN897rasQrPxt6uVw+ENHHQuTuYy7YCshd/oe6rj9xDEqgfxHRG06RS2PRVyOly0XPPB/rumYZuEEfJ4DCVkY+Rv9Z1/VbTrOVQN8T0Q2nyMBY02VEcbl4nsbhcLhfr9efOQZsaIvgRGSCHSkrG/p4FA3+FNWXkWgZi6CjY0dDfjofcdaZ87ERJxQxkxg6WmdHRVaBjoIdGVkN2hs7OrIqtBf2FJDVodHYU0E2gUZhTwnZDNoaez6f/7n0jFJyqWq97yK6jh6amNUtcFu3dD/8UmyTLYDTQqbQVp09dIA5v7fu5C6LOXRkbBSy6RqNuF3ndO75WCQyFDpSZ6OR4dARsD2QXaA9sb2Q3aA9sD2RXaGR2N7I7tAI7AjIIaAtsaMgJ7TkQpz5Wcid4bVMFrtw/+wxBPkyvCu0NfLzPkMAbDdoFHIUbBdoNHIEbDi0F7I3NhTaG9kTGwYdBdkLGwIdDdkD2xw6KjIa2xQ6H86+3DqZQVt0crd3kV83aA+gJXL3f+WIGsztjKvD1TsaCYCsJUVXhfaYuEfNEnQ1aM8Je9Yei64CHWGiETJcQxdDR5pgpCzn6CLoiBOLmEn0KCvqhKyeQUqfPxZ1dGTk7k82WkY2tNVttcU7PCJlZUMrva/j9Fxh+iVwI+zpvK/j6QQBemhqsIxM530dKGSjNXsy7+swXS76bhy0lpGpvK/DBbnDV8Auys8+GUquU9HLRV9nl67ZkvxF0CXYkpBjN24447jY0vzF0BxsaUgOIGfsWGyN/CLoMdgaITl43LFD2Fr5xdDXsLVCcvG44/uwNfOrQB8n1p7Nb89e1H3r9WpMLrZ1fjVo7sT+t/EJDTriCZ3QIAFQmezohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCV+QsW3LyXUOtz6AAAAABJRU5ErkJggg=="
+                  />
+                  <image
+                    id="image1_466_1927"
+                    width="100"
+                    height="100"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgElEQVR4nO3cX2+LUQCA8SfhG5BsEmvdmEpkiivuMFeMcYUZ7vhifB4S/xLMBSbxLyEmM6XSpJKmSe2cetv37Jznl/Ry63n77Kzb23MOSJIkSZIkSZIkSZIkSZJysBs4Qrpm+48i7ALuAxvAadIzAzwGngH7KCRGt//oRTlDejG6/cfTnGfKcIzUoswOxcg6yqgYg1HO1ji+3gv+5B/jewjspZAYg1EWaxjffuB5wPgeAHvIQO+vqa8BF9ytYabMAS8Cx/YLuEImTgFfAi/8O3AusRi/gTtk5mRElE3gwgTH0oicGbfJ1Angc81RGsDLiBi3yFwvyqfAF+QHsFThcxtjhOORUS5WEKMJrAU+Z6eEmVFnlGZkjJsU6hjwMSLKpTGewxgJRTkAvHJmxGtHRlkO+J4HgdcRMVbHGHfW2hFRtoDL28R4Y4xqonz4zyixMW5UMO6sHY2I0ntBrw187bwxJmNhjCi9GG+dGZON8j7i11dowJ/A1QmOO2stYD3whQ6dTSt1X9RO16ooijESitIBrlc5IMGhiDdtYyQapePMMEhRs2PdN/N83tRX6r6IXLT8szcdh4F3Ff9j6M3EMS1462Rn3/Gd9+Zi/TG2hpZ3evs9gw+oVqu+iFy0K/xc3c/Tp7zyZDnge7riJMFlQE2XAaW3erHpEtJ0YowTpYgV7ymsgG+4DaGaPSJLFcQwSsK7qBrunorfZ7gJnCed/YV3yUzsps/FKYxpLnA7dHZR3Bad4MEB9wJ+CjdqOs2huIMDQqLUfd7JbElHa2wXpe4YRR4+MypKamdmzZR0PNNwlG+JxRiM8qiUA8z+8og/SZIkSZIkSZIkSZIkSRLT8Ac3Q8DXdsnrRgAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+              <span>No security check provided</span>
+            </li>
+            <li>
+              <svg
+                width="20"
+                height="24"
+                viewBox="0 0 20 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  x="2.5"
+                  y="2"
+                  width="15"
+                  height="20"
+                  fill="url(#pattern0)"
+                />
+                <path
+                  d="M10 2C4.47715 2 0 6.47715 0 12C0 17.5228 4.47715 22 10 22C15.5228 22 20 17.5228 20 12C19.9936 6.47982 15.5202 2.00643 10 2Z"
+                  fill="#FF4242"
+                />
+                <rect width="20" height="24" fill="url(#pattern1)" />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_466_1927"
+                      transform="matrix(0.0111111 0 0 0.00833333 0 0.125)"
+                    />
+                  </pattern>
+                  <pattern
+                    id="pattern1"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image1_466_1927"
+                      transform="matrix(0.01 0 0 0.00833333 0 0.0833333)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_466_1927"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAAAXNSR0IArs4c6QAAA4RJREFUeF7t3EFq21AQBuARmPYEhkJP5IWhXXjdYzTtpskquUb3hS5kMN35NC3ZeuWCqIuDlLjGsjRvZv4Z0ck2z8z/Pk2epCdHFeUPRKCCVMkilNCgJkjohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCVyY6eGvRisXg9m83uiOhDm/1r0zRfNpvNb9BcRGWs86t09Gq1erXf778R0fJ0tlVV/djtdu+22+1epGD8YUR+MXRfyM4mOjYqvwh6KGR0bGT+YuixIaNio/MXQXNDRsP2yM+Gbs/O34loUXiO2jRN897rasQrPxt6uVw+ENHHQuTuYy7YCshd/oe6rj9xDEqgfxHRG06RS2PRVyOly0XPPB/rumYZuEEfJ4DCVkY+Rv9Z1/VbTrOVQN8T0Q2nyMBY02VEcbl4nsbhcLhfr9efOQZsaIvgRGSCHSkrG/p4FA3+FNWXkWgZi6CjY0dDfjofcdaZ87ERJxQxkxg6WmdHRVaBjoIdGVkN2hs7OrIqtBf2FJDVodHYU0E2gUZhTwnZDNoaez6f/7n0jFJyqWq97yK6jh6amNUtcFu3dD/8UmyTLYDTQqbQVp09dIA5v7fu5C6LOXRkbBSy6RqNuF3ndO75WCQyFDpSZ6OR4dARsD2QXaA9sb2Q3aA9sD2RXaGR2N7I7tAI7AjIIaAtsaMgJ7TkQpz5Wcid4bVMFrtw/+wxBPkyvCu0NfLzPkMAbDdoFHIUbBdoNHIEbDi0F7I3NhTaG9kTGwYdBdkLGwIdDdkD2xw6KjIa2xQ6H86+3DqZQVt0crd3kV83aA+gJXL3f+WIGsztjKvD1TsaCYCsJUVXhfaYuEfNEnQ1aM8Je9Yei64CHWGiETJcQxdDR5pgpCzn6CLoiBOLmEn0KCvqhKyeQUqfPxZ1dGTk7k82WkY2tNVttcU7PCJlZUMrva/j9Fxh+iVwI+zpvK/j6QQBemhqsIxM530dKGSjNXsy7+swXS76bhy0lpGpvK/DBbnDV8Auys8+GUquU9HLRV9nl67ZkvxF0CXYkpBjN24447jY0vzF0BxsaUgOIGfsWGyN/CLoMdgaITl43LFD2Fr5xdDXsLVCcvG44/uwNfOrQB8n1p7Nb89e1H3r9WpMLrZ1fjVo7sT+t/EJDTriCZ3QIAFQmezohAYJgMpkRyc0SABUJjs6oUECoDLZ0QkNEgCV+QsW3LyXUOtz6AAAAABJRU5ErkJggg=="
+                  />
+                  <image
+                    id="image1_466_1927"
+                    width="100"
+                    height="100"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgElEQVR4nO3cX2+LUQCA8SfhG5BsEmvdmEpkiivuMFeMcYUZ7vhifB4S/xLMBSbxLyEmM6XSpJKmSe2cetv37Jznl/Ry63n77Kzb23MOSJIkSZIkSZIkSZIkSZJysBs4Qrpm+48i7ALuAxvAadIzAzwGngH7KCRGt//oRTlDejG6/cfTnGfKcIzUoswOxcg6yqgYg1HO1ji+3gv+5B/jewjspZAYg1EWaxjffuB5wPgeAHvIQO+vqa8BF9ytYabMAS8Cx/YLuEImTgFfAi/8O3AusRi/gTtk5mRElE3gwgTH0oicGbfJ1Angc81RGsDLiBi3yFwvyqfAF+QHsFThcxtjhOORUS5WEKMJrAU+Z6eEmVFnlGZkjJsU6hjwMSLKpTGewxgJRTkAvHJmxGtHRlkO+J4HgdcRMVbHGHfW2hFRtoDL28R4Y4xqonz4zyixMW5UMO6sHY2I0ntBrw187bwxJmNhjCi9GG+dGZON8j7i11dowJ/A1QmOO2stYD3whQ6dTSt1X9RO16ooijESitIBrlc5IMGhiDdtYyQapePMMEhRs2PdN/N83tRX6r6IXLT8szcdh4F3Ff9j6M3EMS1462Rn3/Gd9+Zi/TG2hpZ3evs9gw+oVqu+iFy0K/xc3c/Tp7zyZDnge7riJMFlQE2XAaW3erHpEtJ0YowTpYgV7ymsgG+4DaGaPSJLFcQwSsK7qBrunorfZ7gJnCed/YV3yUzsps/FKYxpLnA7dHZR3Bad4MEB9wJ+CjdqOs2huIMDQqLUfd7JbElHa2wXpe4YRR4+MypKamdmzZR0PNNwlG+JxRiM8qiUA8z+8og/SZIkSZIkSZIkSZIkSRLT8Ac3Q8DXdsnrRgAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+              <span>Can not choose reviewer</span>
+            </li>
+          
+             </ul>
+          <button class="button">Choose plan</button>
+        </div>
+    </article>
+
+    <article class="plan [ card ]">
+        <div class="inner">
+          <span class="pricing">
+            <span> 3500 <small>/ month</small> </span>
+          </span>
+          <h2 class="title">Expert</h2>
+          <p class="info">Features</p>
+          <ul class="features">
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              From Documentation, code is executed locally</li> and checked according to given description
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>Code base security check</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>Flexibility to choose your own code reviewer</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>5+ applications code review</span>
+            </li>
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>New description based on our reviews</span>
+            </li>
+
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>“Trusted by us” tag</span>
+            </li>
+
+            <li>
+              <span class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span>4-day review period</span>
+            </li>
+            
+             </ul>
+          <button class="button">Choose plan</button>
+        </div>
+    </article>
+    </div>
+  </body>
+</html>

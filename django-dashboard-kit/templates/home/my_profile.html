@@ -1,0 +1,58 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+{% load static %}
+
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">SolvifyHub</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item">My Profile</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center ">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i data-feather="mail"></i></span>
+                            <input type="email" class="form-control" placeholder="Email address">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text"><i data-feather="lock"></i></span>
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <button class="btn btn-block btn-primary mb-4">Signin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="{% static 'js/plugins/apexcharts.min.js' %}"></script>
+    <script src="{% static 'js/pages/dashboard-sale.js' %}"></script>
+
+{% endblock javascripts %}

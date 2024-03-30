@@ -1,0 +1,30 @@
+/* Star rating styles */
+.rating {
+    display: inline-block;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating label:before {
+    content: '\2605';
+    /* Star character */
+}
+
+.rating input:checked~label {
+    color: #ff0;
+    /* Yellow color */
+}
+
+/* Rating value styles */
+.rating-value {
+    font-size: 20px;
+    margin-left: 10px;
+}

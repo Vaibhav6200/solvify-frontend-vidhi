@@ -1,0 +1,383 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<style>
+        .project-title{
+            font-size: 20px;
+        }
+        /* Tag styles */
+  .tag-container {
+    margin-top: 10px;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  /* Hover effect */
+  .tag:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+
+  .rating{
+    padding:5px 2px;
+  }
+
+  .fa-star{
+    padding:0px 2px;
+  }
+
+  .feather{
+    float:right;
+  }
+    </style>
+{% endblock stylesheets %}
+{% load static %}
+
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Find Projects</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Hosters Dashboard</a></li>
+                                <li class="breadcrumb-item">Find Projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="mx-5 mt-5">
+        <div class="row" >
+            <div class="col-md-3" >
+                <section class="border p-4 shadow-sm" style="background:white">
+                    <div class="d-flex flex-column" >
+                        <h4 class="mb-3">Filters</h4>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between mb-1">
+                                <h6>Project Type</h6>
+                                <a href="">clear</a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Hourly rate
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Fixed Price
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between">
+                                <h6>Fixed Price</h6>
+                                <a href="">clear</a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div class="d-flex flex-column mb-2">
+                                    <div>min</div>
+                                    <input class="form-control form-control-sm" type="number" min="0">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <div>max</div>
+                                    <input class="form-control form-control-sm" type="number" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between">
+                                <h6>Hourly Rate</h6>
+                                <a href="">clear</a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div class="d-flex flex-column mb-2">
+                                    <div>min</div>
+                                    <input class="form-control form-control-sm" type="number" min="0">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <div>max</div>
+                                    <input class="form-control form-control-sm" type="number" min="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between">
+                                <h6>Skill</h6>
+                                <a href="">clear</a>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        PHP
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Java
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        C++
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Django
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Bootstrap
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        reactJS
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        nextJS
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Python
+                                    </label>
+                                </div>
+                                <a class="" href="">+16 more</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-9" >
+                <section class="shadow-sm" style="background:white">
+                    <div class="px-4 py-2 border d-flex justify-content-between">
+                        <div>
+                            <b class="mr-3">Total Result:</b> 1-20 of 2k results
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3" style="margin:0px 10px">Sort</div>
+                            <select class="form-control form-control-sm" aria-label="Default select example">
+                              <option value="" selected>Latest</option>
+                              <option value="">Oldest</option>
+                              <option value="">Lowest Price</option>
+                              <option value="">Highest Price</option>
+                              <option value="">Fewest Bids</option>
+                              <option value="">Most Bids</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="p-4 border">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex justify-content-between">
+                                <div class="project-title">Project Name</div>
+                                <div class="d-flex">
+                                    <h4 class="text-muted mr-5 " style="padding:0 20px">39 bids</h4>
+            <h4 class="text-muted">Rs.7400</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <small class="text-muted">budget $30 - $250 USD</small>
+                            </div>
+
+                            <div class="my-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos tenetur placeat voluptates. Labore nulla omnis aut, blanditiis inventore architecto neque animi, tenetur dolorum reprehenderit eos sapiente et quos velit...
+                            </div>
+                            <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    5.0
+                                </div>
+                                <div class="text-muted"> <span>6 minutes ago</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex justify-content-between">
+                                <div class="project-title">Project Name</div>
+                                <div class="d-flex">
+                                    <h4 class="text-muted mr-5 " style="padding:0 20px">39 bids</h4>
+            <h4 class="text-muted">Rs.7400</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <small class="text-muted">budget $30 - $250 USD</small>
+                            </div>
+
+                            <div class="my-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos tenetur placeat voluptates. Labore nulla omnis aut, blanditiis inventore architecto neque animi, tenetur dolorum reprehenderit eos sapiente et quos velit...
+                            </div>
+                            <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    5.0
+                                </div>
+                                <div class="text-muted"> <span>6 minutes ago</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex justify-content-between">
+                                <div class="project-title">Project Name</div>
+                                <div class="d-flex">
+                                    <h4 class="text-muted mr-5 " style="padding:0 20px">39 bids</h4>
+            <h4 class="text-muted">Rs.7400</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <small class="text-muted">budget $30 - $250 USD</small>
+                            </div>
+
+                            <div class="my-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos tenetur placeat voluptates. Labore nulla omnis aut, blanditiis inventore architecto neque animi, tenetur dolorum reprehenderit eos sapiente et quos velit...
+                            </div>
+                            <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    5.0
+                                </div>
+                                <div class="text-muted"> <span>6 minutes ago</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 border">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex justify-content-between">
+                                <div class="project-title">Project Name</div>
+                                <div class="d-flex">
+                                    <h4 class="text-muted mr-5 " style="padding:0 20px">39 bids</h4>
+            <h4 class="text-muted">Rs.7400</h4>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <small class="text-muted">budget $30 - $250 USD</small>
+                            </div>
+
+                            <div class="my-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos tenetur placeat voluptates. Labore nulla omnis aut, blanditiis inventore architecto neque animi, tenetur dolorum reprehenderit eos sapiente et quos velit...
+                            </div>
+                            <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    <span><i class="fa fa-solid fa-star mr-1"></i></span>
+                                    5.0
+                                </div>
+                                <div class="text-muted"> <span>6 minutes ago</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+            
+                  
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="{% static 'js/plugins/apexcharts.min.js' %}"></script>
+    <script src="{% static 'js/pages/dashboard-sale.js' %}"></script>
+
+{% endblock javascripts %}

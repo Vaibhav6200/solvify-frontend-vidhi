@@ -1,0 +1,202 @@
+
+{% extends "layouts/base.html" %} {% load static %} {% block title %} Dashboard
+{% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<style>
+  .project-title {
+    font-size: 20px;
+  }
+
+  /* Tag styles */
+  .tag-container {
+    margin-top: 10px;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  /* Hover effect */
+  .tag:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+
+  .rating{
+    padding:5px 2px;
+  }
+
+  .fa-star{
+    padding:0px 2px;
+  }
+
+  .feather{
+    float:right;
+  }
+
+  
+</style>
+{% endblock stylesheets %} 
+{% load static %} 
+{% block content %}
+
+<!-- [ Main Content ] start -->
+<div class="pc-container">
+  <div class="pcoded-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+      <div class="page-block">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="page-header-title">
+              <h5 class="m-b-10">Recommended Projects</h5>
+            </div>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Hosters Dashboard</a>
+              </li>
+              <li class="breadcrumb-item">Recommended Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- [ breadcrumb ] end -->
+
+   
+    <!-- [ Main Content ] start -->
+    
+    <h2 style="margin-top:50px;">Recommended Jobs</h2>
+    <div class="card w-90">
+        
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div class="project-title">Project Name</div>
+          <div class="d-flex">
+            <h4 class="text-muted mr-5 " style="padding:0 20px">39 bids</h4>
+            <h4 class="text-muted">Rs.7400</h4>
+          </div>
+        </div>
+        <div class="d-flex">
+          <small class="text-muted">budget Rs.3000 - Rs.9000 </small>
+        </div>
+
+        <div class="my-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta
+          iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos
+          tenetur placeat voluptates. Labore nulla omnis aut, blanditiis
+          inventore architecto neque animi, tenetur dolorum reprehenderit eos
+          sapiente et quos velit...
+        </div>
+
+        <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+        <div class="rating">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            5.0
+          </div>
+        
+          
+        </div>
+      </div>
+            <a href="#" class="btn btn-primary">Select</a>
+
+      
+        
+        <a><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+        <div class="text-muted" style="float:right"><span>6 minutes ago</span></div>
+        
+      </div>
+    </div>
+
+    <div class="card w-90" style="margin:20px 0">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <div class="project-title">Project Name</div>
+          <div class="d-flex">
+            <h4 class="text-muted mr-5 " style="padding:0 20px">39 bids</h4>
+            <h4 class="text-muted">Rs.7400</h4>
+          </div>
+        </div>
+        <div class="d-flex">
+          <small class="text-muted">budget Rs.3000 - Rs.9000 </small>
+        </div>
+
+        <div class="my-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          maxime repellat aut recusandae, sunt ipsam ad dolorem ipsa ex dicta
+          iste dolorum mollitia fugiat laudantium nihil nulla illum quas eos
+          tenetur placeat voluptates. Labore nulla omnis aut, blanditiis
+          inventore architecto neque animi, tenetur dolorum reprehenderit eos
+          sapiente et quos velit...
+        </div>
+
+        <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+        <div class="rating">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            <span><i class="fa fa-solid fa-star mr-1"></i></span>
+            5.0
+          </div>
+        
+          
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary">Select</a>
+      
+        
+        <a><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+        <div class="text-muted" style="float:right"><span>6 minutes ago</span></div>
+        
+      </div>
+    </div>
+
+    
+    
+
+    <!-- [ Main Content ] end -->
+  </div>
+</div>
+<!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script src="{% static 'js/plugins/apexcharts.min.js' %}"></script>
+<script src="{% static 'js/pages/dashboard-sale.js' %}"></script>
+
+{% endblock javascripts %}

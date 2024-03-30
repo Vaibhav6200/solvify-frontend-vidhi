@@ -1,0 +1,130 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<style>
+ /* Tag styles */
+  .tag-container {
+    margin-top: 10px;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  /* Hover effect */
+  .tag:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+</style>
+{% endblock stylesheets %}
+{% load static %}
+
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">Project Details</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Developers Dashboard</a></li>
+                                <li class="breadcrumb-item">Project Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <div class="container my-5" style="background:white; width:90% ">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="h4" style="padding:10px">Full Stack Web Application (like urbancompany) <sup class="text-success">open</sup></div>
+            <div class="d-flex">
+                <div class="d-flex flex-column align-items-center mr-5" >
+                    <small class="text-muted mb-1" style="padding:10px 20px">Bids</small>
+                    <div class="h5">23</div>
+                </div>
+                <div class="d-flex flex-column align-items-center">
+                    <small class="text-muted mb-1" style="padding:10px 20px">Average Bids</small>
+                    <div class="h5"><i class="fa fa-sm fa-solid fa-indian-rupee-sign mr-1"></i>35,457 INR</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="details_tab" style="width:100%">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="border shadow-sm p-4 mb-2">
+                        <div class="d-flex flex-wrap justify-content-between" id="project_heading">
+                            <div class="h5">Project Details</div>
+                            <div class="h5"><i class="fa fa-sm fa-solid fa-indian-rupee-sign mr-1"></i>1,250 - 2500 INR</div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <small class="ml-auto"><i class="mr-1 fa fa-regular fa-clock" style="margin:0px 10px"></i>BIDDING ENDS IN 6 DAYS, 23 HOURS</small>
+                        </div>
+
+                        <div class="mb-4" id="project_description">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ex?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sint adipisci assumenda optio minima consectetur totam deserunt, quaerat perferendis accusantium facilis, laborum error itaque quisquam molestias numquam soluta voluptatum tempora illum odio nesciunt quas distinctio fuga illo? Consequuntur, amet quam?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum autem odio. Consequuntur perferendis odio maiores id magni quo amet.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laborum ducimus quo voluptatem quisquam ut reiciendis earum aspernatur, maiores ipsa rerum dolor aut totam explicabo, expedita repellat facere, sint ullam!s</p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+
+                        <div id="skills_required">
+                            <div class="h5 mb-3">Skills Required</div>
+                            <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                    
+                       
+                </div>
+            
+        
+
+
+
+            
+                  
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+    <script src="{% static 'js/plugins/apexcharts.min.js' %}"></script>
+    <script src="{% static 'js/pages/dashboard-sale.js' %}"></script>
+
+{% endblock javascripts %}
