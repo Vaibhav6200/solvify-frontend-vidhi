@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous'>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title> Review </title>
+
+    <style>
+        .form-range{
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 d-flex">
+        <div class="card " style="width: 30rem; margin:0 auto;">
+            <div class="card-header" style="position: relative; padding: 25px 10px 10px;">
+                <h2>Customize your Review Plan</h2>
+                <small class="badge text-white" style="position: absolute; top: 10px; right: 10px; background-color: #7267EF;">Recommended</small>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Number of files for review
+                                        <div class="output">Enter total number of files coded by you : <output id="fileNumber"> </output>
+
+                    <div class=input>                               
+                    <label for="files" class="form-label"></label>
+                    <input type="range" class="form-range"  min="0" max="100"  id="files" oninput="fileNoChange(this.value)">
+
+                    </div>   </li>
+                <li class="list-group-item">get documentation 
+                                        <div class="output">Total number of files : <output id="documentationNo"> </output>
+<div class=input>                               
+                    <label for="documentation" class="form-label"></label>
+                    <input type="range" class="form-range" min="0" max="100" id="documentation" oninput="documentationChange(this.value)">
+
+                    </div>   </li>
+                <li class="list-group-item">get external services used list 
+                    <div class="output">Total number of files : <output id="serviceNo"> </output>
+
+                    <div class=input>                               
+                    <label for="services" class="form-label"></label>
+                    <input type="range" class="form-range" min="0" max="100" id="services" oninput="servicesChange(this.value)">
+
+                    </div>
+                  </li>
+                <li class="list-group-item">
+                    get sample data
+                    <div class="output">Enter total number of tables : <output id="tableNo"> </output>
+
+                    <div class=input>                               
+                    <label for="tables" class="form-label"></label>
+                    <input type="range" class="form-range" min="0" max="100" id="tables" oninput="tablesChange(this.value)">
+
+                    </div>
+
+                    <div class="output">Enter total number of pages : <output id="pageNo"> </output>
+
+                    <div class=input>                               
+                    <label for="pages" class="form-label"></label>
+                    <input type="range" class="form-range" min="0" max="100" id="pages" oninput="pagesChange(this.value)">
+
+                    </div>
+                 </li>
+                <li class="list-group-item">Get reviewed badge
+                <div class="custom-control custom-switch" style="display:inline-block; float:right;">
+                <input type="checkbox" class="custom-control-input" id="badge">
+                <label class="custom-control-label" for="badge">YES</label> </li>
+                <li class="list-group-item">Added to client recommendations
+                    <div class="custom-control custom-switch" style="display:inline-block; float:right;">
+                <input type="checkbox" class="custom-control-input" id="recommendations">
+                <label class="custom-control-label" for="recommendations">YES</label> </li>
+                
+                <li class="list-group-item">Get Perfect Report
+                    <div class="custom-control custom-switch" style="display:inline-block; float:right;">
+                <input type="checkbox" class="custom-control-input" id="report">
+                <label class="custom-control-label" for="report">YES</label>  </li>
+                  </li>
+                <!-- <li class="list-group-item">Extras: find tech used, scan requirements file for version matching etc. = 5000  </li> -->
+            </ul>
+            <button class="btn btn-block text-white" style="font-weight: 500; font-size: 20px; background-color: #7267EF;">Choose Plan</button>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.getElementById('fileNumber').innerHTML = 0;
+         document.getElementById('documentationNo').innerHTML = 0;
+         document.getElementById('serviceNo').innerHTML = 0;
+           document.getElementById('tableNo').innerHTML = 0;
+         document.getElementById('pageNo').innerHTML = 0;
+        
+        function fileNoChange(val) {
+document.getElementById('fileNumber').innerHTML = val;
+}
+function documentationChange(val) {
+document.getElementById('documentationNo').innerHTML = val;
+}
+function servicesChange(val) {
+document.getElementById('serviceNo').innerHTML = val;
+}
+function tablesChange(val) {
+document.getElementById('tableNo').innerHTML = val;
+}
+function pagesChange(val) {
+document.getElementById('pageNo').innerHTML = val;
+}
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src='http://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js' integrity='sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T' crossorigin='anonymous'></script>
+</body>
+</html>

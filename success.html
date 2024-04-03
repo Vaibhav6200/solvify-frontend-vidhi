@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+        body{
+            margin:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p style="text-align: center;"><img src="https://cdn.jotfor.ms/img/check-icon.png" alt="Displaying uploaded photo on thank you page Image-0" width="128" height="128" /></p>
+        <div style="text-align: center;">
+            <h1 style="text-align: center;">Your site is already hosted</h1>
+            <p style="text-align: center;">Live preview of your website will be shown at this URL : <a href="#"> <output id="websiteURL"> </output></a></p>
+        </div>
+
+</body>
+<script>
+        document.getElementById('websiteURL').innerHTML = "www.google.com";
+        function inputURL(val) {
+            document.getElementById('fileNumber').innerHTML = val;
+        }
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
