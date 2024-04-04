@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preview Details</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <style>
+        body{
+            margin:100px;
+        }
+
+        button{
+            float:right;
+        }
+
+        .card{
+            margin:20px;
+        }
+
+     .row {
+    margin-top: 10px;
+  }
+
+  .fa-check{
+    color:green;
+    margin-right:10px;
+  }
+  .tag {
+    display: inline-block;
+    background-color: aliceblue;
+    padding: 0px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  /* Hover effect */
+  .tag:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+
+   </style>
+</head>
+<body>
+  <div class="accordion" id="myAccordion">
+
+<div class="card">
+<div class="card-header" id="item1Header">
+     <h5 class="mb-0">
+        <h4 class="card-title"> Project Details </h4>
+    
+       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable1" aria-expanded="false" aria-controls="expandable1">
+         See details 
+       </button>
+     </h5>
+   </div>
+   <div id="expandable1" class="collapse" aria-labelledby="item1Header" data-parent="#myAccordion">
+     <div class="card-body">
+        <div class="row">
+            <div class="col-lg-6">
+                Website name: abc
+            </div>
+            <div class="col-lg-6">
+                Website url: abc
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                Estimated Price: Rs.5400
+            </div>
+            <div class="col-lg-6">
+                Category: E-commerce
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+            Tech used
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+        <div class="tag-container">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Django</span>
+          <span class="tag">MySql</span>
+        </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            Description
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="card">
+   <div class="card-header" id="item2Header">
+     <h5 class="mb-0">
+    <h4 class="card-title"> Files Uploaded </h4>
+    
+
+       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#expandable2" aria-expanded="true" aria-controls="expandable2">
+         See details 
+       </button>
+     </h5>
+   </div>
+   <div id="expandable2" class="collapse View" aria-labelledby="item2Header" data-parent="#myAccordion">
+     <div class="card-body">
+    
+        <div class="card" style="border:none; margin:20px; padding:5px;">
+            <h5>Images</h5>
+            <div class="row">
+                <div class="d-flex justify-content-around" style="width:40%; margin-right:100px" >
+                    <div class="text" style="width:70%;"> Card Image : card.png  </div>
+                    <a href="#"style="width:25%;"> View Image </a> 
+                </div>
+                <div class="d-flex justify-content-around" style="width:40%;">
+                    <div class="text" style="width:70%;"> Banner Image : banner.png  </div>
+                    <a href="#" style="width:25%;"> View Image </a> 
+                </div>
+                
+            </div>
+             <div class="row">
+                <div class="d-flex justify-content-around" style="width:40%; margin-right:100px" >
+                    <div class="text" style="width:70%;"> Website Logo : website.png  </div>
+                    <a href="#" style="width:25%;"> View Image </a> 
+                </div>
+                <div class="d-flex justify-content-around" style="width:40%;">
+                    <div class="text" style="width:70%;"> Gallery Image 1 : gallery1.png  </div>
+                    <a href="#" style="width:25%;"> View Image </a> 
+                </div>
+                
+            </div>
+              <div class="row">
+                <div class="d-flex justify-content-around" style="width:40%; margin-right:100px" >
+                    <div class="text" style="width:70%;"> Gallery Image 2 : galleryimage2.png   </div>
+                    <a href="#" style="width:25%;"> View Image </a> 
+                </div>
+                <div class="d-flex justify-content-around" style="width:40%;">
+                    <div class="text" style="width:70%;"> Gallery Image 3 : gallery3.png  </div>
+                    <a href="#" style="width:25%;"> View Image </a> 
+                </div>
+                
+            </div>
+            
+           
+        </div>
+
+         <div class="card" style="border:none; margin:20px; padding:5px;">
+            <h5>Documents</h5>
+            <div class="row">
+                <div class="d-flex justify-content-around" style="width:40%; margin-right:100px" >
+                    <div class="text" style="width:70%;"> Source Code : project.zip  </div>
+                    <a href="#" style="width:25%;"> View Document </a> 
+                </div>
+                <div class="d-flex justify-content-around" style="width:40%;">
+                    <div class="text" style="width:70%;"> Documentation : this.pdf  </div>
+                    <a href="#" style="width:25%;"> View Document </a> 
+                </div>
+            </div>
+
+
+           
+            
+           
+        </div>
+
+        <div class="card" style="border:none; margin:20px; padding:5px;">
+            <h5>Video</h5>
+            <div class="row">
+                <div class="d-flex justify-content-around" style="padding:5px">
+                    <div class="text"> Video URL : 
+                    <a href="#"> google.com </a>  </div>
+                </div>
+            </div>
+        </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="card">
+   <div class="card-header" id="item3Header">
+     <h5 class="mb-0">
+        <h4 class="card-title"> Subscription Plans </h4>
+
+       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable3" aria-expanded="false" aria-controls="expandable3">
+          See details 
+       </button>
+     </h5>
+   </div>
+   <div id="expandable3" class="collapse" aria-labelledby="item3Header" data-parent="#myAccordion">
+     <div class="card-body">
+         <div class="card" style="border:none; margin:20px;padding:5px;">
+            <h5>Hosting Plan</h5>
+            <div class=" text-right price"> Rs.3500/mo </div>
+
+            <div class="hosting">
+                <h6>Expert Plan </h6>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Flexibility to choose hosting provider
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Custom domain and DNS Setup
+                    </div>
+                </div>
+                     <div class="row">
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Bidding Period - 3 days
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Hosting Period - 4 days
+                    </div>
+                </div>
+                     <div class="row">
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Hosting and Cloud Maintenance
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Advanced Technical Support
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="card" style="border:none; margin:40px 20px; padding:5px">
+            <h5>Review Plan</h5>
+            <div class=" text-right price"> Rs.7800/mo </div>
+
+
+            <div class="review">
+                <h6>Custom Plan </h6>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Feature 1
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Feature 2
+                    </div>
+                </div>
+                     <div class="row">
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Feature 3
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Feature 4
+                    </div>
+                </div>
+                     <div class="row">
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Feature 5
+                    </div>
+                    <div class="col-lg-6">
+                        <i class="fa fa-check"></i>Feature 6
+                    </div>
+                </div>
+
+            </div>
+            </div>
+         </div>
+        </div>
+   </div>
+ </div>
+</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
